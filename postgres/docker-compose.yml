@@ -1,0 +1,14 @@
+# docker-compose --compatibility up -d --build
+# docker-compose down
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres-container
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=mysecretpassword1234
+      - PGPASSWORD=mysecretpassword1234
+      - POSTGRES_DB=testdb
